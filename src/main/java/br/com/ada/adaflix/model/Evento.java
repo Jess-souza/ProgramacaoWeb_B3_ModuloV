@@ -2,7 +2,6 @@ package br.com.ada.adaflix.model;
 
 import jakarta.persistence.*;
 
-import java.time.LocalDate;
 import java.time.LocalDateTime;
 
 @Entity
@@ -22,7 +21,7 @@ public class Evento {
     private Long capacidade;
     private LocalDateTime inicioVendas;
     @Column(name = "encerramento")
-    private LocalDate fimVendas;
+    private LocalDateTime fimVendas;
 
     @ManyToOne
     @JoinColumn(name = "empresa_id")
@@ -109,11 +108,11 @@ public class Evento {
         this.inicioVendas = inicioVendas;
     }
 
-    public LocalDate getFimVendas() {
+    public LocalDateTime getFimVendas() {
         return fimVendas;
     }
 
-    public void setFimVendas(LocalDate fimVendas) {
+    public void setFimVendas(LocalDateTime fimVendas) {
         this.fimVendas = fimVendas;
     }
 }
